@@ -1,8 +1,8 @@
 {
-  "title": "1semicolon",
+  "title": "2 semicolon",
   "rules": [
     {
-      "description": "1super semicolon",
+      "description": "2 super semicolon",
       "manipulators": [
         {
           "type": "basic",
@@ -674,6 +674,27 @@
           "to": [
             {
               "key_code": "5",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "semi_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6"
+          },
+          "to": [
+            {
+              "key_code": "6",
               "modifiers": [
                 "left_shift"
               ]

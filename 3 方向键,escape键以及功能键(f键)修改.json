@@ -1,8 +1,8 @@
 {
-  "title": "1arrow to switch window",
+  "title": "3 方向键escape键以及功能键(f键)修改",
   "rules": [
     {
-      "description": "1arrow to switch window",
+      "description": "3 方向键,escape键以及功能键(f键)修改",
       "manipulators": [
         {
           "type": "basic",
@@ -88,6 +88,41 @@
             }
           ]
         },
+        
+
+
+
+
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f18",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ]
+        },
+
+
+
+
+
+
+
+
+
+
         {
           "type": "basic",
           "from": {
@@ -100,10 +135,9 @@
           },
           "to": [
             {
-              "key_code": "1",
+              "key_code": "f16",
               "modifiers": [
-                "left_command",
-                "left_shift"
+                "left_option"
               ]
             }
           ]
@@ -120,10 +154,9 @@
           },
           "to": [
             {
-              "key_code": "2",
+              "key_code": "f19",
               "modifiers": [
-                "left_command",
-                "left_shift"
+                "left_option"
               ]
             }
           ]
@@ -140,10 +173,9 @@
           },
           "to": [
             {
-              "key_code": "3",
+              "key_code": "f16",
               "modifiers": [
-                "left_command",
-                "left_shift"
+                "left_control"
               ]
             }
           ]
@@ -160,10 +192,9 @@
           },
           "to": [
             {
-              "key_code": "4",
+              "key_code": "f17",
               "modifiers": [
-                "left_command",
-                "left_shift"
+                "left_control"
               ]
             }
           ]
@@ -172,126 +203,6 @@
           "type": "basic",
           "from": {
             "key_code": "f5",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "5",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f6",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "6",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f7",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "7",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f8",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "8",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f9",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "9",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f10",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "0",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f11",
             "modifiers": {
               "optional": [
                 "caps_lock"
@@ -311,7 +222,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "f12",
+            "key_code": "f6",
             "modifiers": {
               "optional": [
                 "caps_lock"
@@ -324,6 +235,123 @@
               "modifiers": [
                 "left_command",
                 "left_option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f7",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f16",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f8",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f17",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f9",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f19",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f10",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "8",
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f11",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f12",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": [
+                "left_shift",
+                "left_command"
               ]
             }
           ]

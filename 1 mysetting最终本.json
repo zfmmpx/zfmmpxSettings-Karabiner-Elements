@@ -1,8 +1,8 @@
 {
-  "title": "11 mysetting最终版本",
+  "title": "1 mysetting最终版本",
   "rules": [
     {
-      "description": "11 mysetting最终版本",
+      "description": "1 mysetting最终版本",
       "manipulators": [
         {
           "type": "basic",
@@ -40,6 +40,83 @@
             }
           ]
         },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "optional": [
+                "caps_lock",
+                "command",
+                "option",
+                "shift",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f16",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vi_mode",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "vi_visual_mode",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_shift",
+            "modifiers": {
+              "optional": [
+                "caps_lock",
+                "command",
+                "option",
+                "shift",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f19",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vi_mode",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "vi_visual_mode",
+              "value": 0
+            }
+          ]
+        },
+
+
+
+
+
         {
           "type": "basic",
           "from": {
