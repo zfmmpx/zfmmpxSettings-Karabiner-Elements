@@ -1,8 +1,8 @@
 {
-  "title": "3 方向键escape键以及功能键(f键)修改",
+  "title": "4 方向键escape键以及功能键(f键)修改",
   "rules": [
     {
-      "description": "3 方向键,escape键以及功能键(f键)修改",
+      "description": "4 方向键escape键以及功能键(f键)修改",
       "manipulators": [
         {
           "type": "basic",
@@ -10,12 +10,7 @@
             "key_code": "left_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "fn",
-                "command",
-                "control",
-                "option",
-                "shift"
+                "any"
               ]
             }
           },
@@ -31,12 +26,7 @@
             "key_code": "down_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "fn",
-                "command",
-                "control",
-                "option",
-                "shift"
+                "any"
               ]
             }
           },
@@ -52,12 +42,7 @@
             "key_code": "up_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "fn",
-                "command",
-                "control",
-                "option",
-                "shift"
+                "any"
               ]
             }
           },
@@ -73,12 +58,7 @@
             "key_code": "right_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "fn",
-                "command",
-                "control",
-                "option",
-                "shift"
+                "any"
               ]
             }
           },
@@ -88,12 +68,6 @@
             }
           ]
         },
-        
-
-
-
-
-
         {
           "type": "basic",
           "from": {
@@ -113,16 +87,6 @@
             }
           ]
         },
-
-
-
-
-
-
-
-
-
-
         {
           "type": "basic",
           "from": {
