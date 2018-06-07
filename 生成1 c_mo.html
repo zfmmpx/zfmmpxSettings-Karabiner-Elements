@@ -3,7 +3,7 @@
 
     var c_mo_data = [
         "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-        "6", "grave_accent_and_tilde", "hyphen", "equal_sign", "open_bracket", "close_bracket", "backslash", "semicolon", "quote", "comma", "period", "slash"
+        "6", "7", "8", "9", "0", "grave_accent_and_tilde", "hyphen", "equal_sign", "open_bracket", "close_bracket", "backslash", "semicolon", "quote", "comma", "period", "slash"
     ]
 
     var c_mo_number = [
@@ -51,7 +51,7 @@
             singleRule = generate_c_mo_single_rule(c_mo_data[i]);
             result.push(singleRule)
         }
-        for(var i = 0; i< c_mo_number.length;i++){
+        for (var i = 0; i < c_mo_number.length; i++) {
             singleRule = generate_c_mo_number_rule(c_mo_number[i]);
             result.push(singleRule)
         }
@@ -83,7 +83,7 @@
         return result;
     }
 
-    function generate_c_mo_number_rule(from_key_code){
+    function generate_c_mo_number_rule(from_key_code) {
         var result = {
             "type": "basic",
             "from": {
@@ -113,15 +113,15 @@
 
 
     var wholeRules = {
-        "title": "3 c_mo",
+        "title": "1 c_mo",
         "rules": [
             {
-                "description": "3 c_mo",
+                "description": "1 c_mo",
                 "manipulators": generate()
             }
         ]
     };
     var jsonString = JSON.stringify(wholeRules);
-    console.log(jsonString);
+    document.write(jsonString);
 
 </script>

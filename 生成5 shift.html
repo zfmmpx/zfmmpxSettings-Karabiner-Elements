@@ -1,0 +1,55 @@
+<script>
+    var data = [
+        ["right_shift", "f17", ["left_option"]],
+    ]
+
+
+    function generate() {
+        var result = [], singleRule = [];
+        for (var i = 0; i < data.length; i++) {
+            singleRule = generate_single_rule(data[i][0], data[i][1], data[i][2], data[i][3]);
+            result.push(singleRule)
+        }
+        return result;
+    }
+
+    function generate_single_rule(from_key_code, to_if_alone_key_code, to_if_alone_modifier_arr) {
+        var result = {
+            "type": "basic",
+            "from": {
+                "key_code": from_key_code,
+                "modifiers": {
+                    "optional": [
+                        "caps_lock"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": from_key_code
+                }
+            ],
+            "to_if_alone": [
+                {
+                    "key_code": to_if_alone_key_code,
+                    "modifiers": to_if_alone_modifier_arr
+                }
+            ]
+        }
+        return result;
+    }
+
+
+    var wholeRules = {
+        "title": "5 修改shift",
+        "rules": [
+            {
+                "description": "5 修改shift",
+                "manipulators": generate()
+            }
+        ]
+    };
+    var jsonString = JSON.stringify(wholeRules);
+    document.write(jsonString);
+
+</script>

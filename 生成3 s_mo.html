@@ -40,26 +40,26 @@
     }]
 
     var spaceKey = [{
-            "type": "basic",
-            "from": {
-                "key_code": "spacebar"
+        "type": "basic",
+        "from": {
+            "key_code": "spacebar"
+        },
+        "to": [
+            {
+                "key_code": "semicolon"
             },
-            "to": [
-                {
-                    "key_code": "semicolon"
-                },
-                {
-                    "key_code": "spacebar"
-                }
-            ],
-            "conditions": [
-                {
-                    "type": "variable_if",
-                    "name": "s_mo",
-                    "value": 1
-                }
-            ]
-        }]
+            {
+                "key_code": "spacebar"
+            }
+        ],
+        "conditions": [
+            {
+                "type": "variable_if",
+                "name": "s_mo",
+                "value": 1
+            }
+        ]
+    }]
 
     function generate() {
         var result = [], singleRule = [];
@@ -98,15 +98,15 @@
 
 
     var wholeRules = {
-        "title": "2 s_mo",
+        "title": "3 s_mo",
         "rules": [
             {
-                "description": "2 s_mo",
+                "description": "3 s_mo",
                 "manipulators": generate()
             }
         ]
     };
     var jsonString = JSON.stringify(wholeRules);
-    console.log(jsonString);
+    document.write(jsonString);
 
 </script>

@@ -1,8 +1,8 @@
 {
-  "title": "2 s_mo",
+  "title": "3 s_mo",
   "rules": [
     {
-      "description": "2 s_mo",
+      "description": "3 s_mo",
       "manipulators": [
         {
           "type": "basic",

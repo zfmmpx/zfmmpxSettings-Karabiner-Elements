@@ -1,6 +1,4 @@
 <script>
-
-
     var data = [
         ["left_arrow", "f16"],
         ["down_arrow", "f17"],
@@ -10,14 +8,14 @@
         ["escape", "f18", ["left_option"]],
         ["f1", "f16", ["left_option"]],
         ["f2", "f19", ["left_option"]],
-        ["f3", "f16", ["left_control"]],
-        ["f4", "f17", ["left_control"]],
-        ["f5", "left_arrow", ["left_command", "left_option"]],
-        ["f6", "right_arrow", ["left_command", "left_option"]],
+        ["f3", "left_arrow", ["left_command", "left_option"]],
+        ["f4", "right_arrow", ["left_command", "left_option"]],
+        ["f5", "f16", ["left_control"]],
+        ["f6", "f17", ["left_control"]],
         ["f7", "f16", ["left_shift"]],
         ["f8", "f17", ["left_option"]],
         ["f9", "f19", ["left_shift"]],
-        ["f10", "8", ["left_shift", "left_command"]],
+        ["f10", "4", ["left_shift", "left_command"]],
         ["f11", "1", ["left_shift", "left_command"]],
         ["f12", "2", ["left_shift", "left_command"]],
     ]
@@ -101,6 +99,6 @@
         ]
     };
     var jsonString = JSON.stringify(wholeRules);
-    console.log(jsonString);
+    document.write(jsonString);
 
 </script>
