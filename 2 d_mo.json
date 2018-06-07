@@ -15,7 +15,7 @@
                         }
                     },
                     "to": [
-                            {
+                        {
                             "set_variable": {
                                 "name": "d_mo",
                                 "value": 1
@@ -101,10 +101,72 @@
                 {
                     "type": "basic",
                     "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "v_mo",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "v_mo",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
                         "key_code": "h",
                         "modifiers": {
                             "optional": [
-                            "any"
+                                "any"
                             ]
                         }
                     },
@@ -1072,68 +1134,6 @@
                     "to": [
                         {
                             "key_code": "left_command"
-                        }
-                    ],
-                    "to_after_key_up": [
-                        {
-                            "key_code": "vk_none"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "v_mo",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "j",
-                        "modifiers": {
-                            "mandatory": [
-                                "option"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "down_arrow",
-                            "modifiers": [
-                                "left_shift"
-                            ]
-                        }
-                    ],
-                    "to_after_key_up": [
-                        {
-                            "key_code": "vk_none"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "v_mo",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "k",
-                        "modifiers": {
-                            "mandatory": [
-                                "option"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "up_arrow",
-                            "modifiers": [
-                                "left_shift"
-                            ]
                         }
                     ],
                     "to_after_key_up": [
