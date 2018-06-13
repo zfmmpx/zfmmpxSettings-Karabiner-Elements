@@ -64,7 +64,7 @@
 
 
     // 特殊规则
-    var dKey = [{
+    var dKey = {
         "type": "basic",
         "from": {
             "key_code": "d",
@@ -95,9 +95,9 @@
                 }
             }
         ]
-    }]
+    };
 
-    var sKey = [{
+    var sKey = {
         "type": "basic",
         "from": {
             "key_code": "s",
@@ -119,9 +119,9 @@
                 "value": 1
             }
         ]
-    }]
+    };
 
-    var vKey = [{
+    var vKey = {
         "type": "basic",
         "from": {
             "key_code": "v",
@@ -159,106 +159,105 @@
                 "value": 1
             }
         ]
-    }]
+    };
 
-var vJ = {
-    "type": "basic",
-    "from": {
-        "key_code": "j",
-        "modifiers": {
-            "mandatory": ["option"]
-        },
-    },
-    "to": [
-        {
-            "key_code": "down_arrow",
-            "modifiers": ["left_shift"]
-        }
-    ],
-    "to_after_key_up": [
-        {
-            "key_code": "vk_none"
-        }
-    ],
-    "conditions": [
-        {
-            "type": "variable_if",
-            "name": "v_mo",
-            "value": 1
-        }
-    ]
-};
-
-var vK = {
-    "type": "basic",
-    "from": {
-        "key_code": "k",
-        "modifiers": {
-            "mandatory": ["option"]
-        },
-    },
-    "to": [
-        {
-            "key_code": "up_arrow",
-            "modifiers": ["left_shift"]
-        }
-    ],
-    "to_after_key_up": [
-        {
-            "key_code": "vk_none"
-        }
-    ],
-    "conditions": [
-        {
-            "type": "variable_if",
-            "name": "v_mo",
-            "value": 1
-        }
-    ]
-};
-
-    var vDisableOtherKey = [
-        {
-            "type": "basic",
-            "from": {
-                "any": "key_code"
+    var vJ = {
+        "type": "basic",
+        "from": {
+            "key_code": "j",
+            "modifiers": {
+                "mandatory": ["option"]
             },
-            "to": [
-                {
-                    "key_code": "vk_none"
-                }
-            ],
-            "conditions": [
-                {
-                    "type": "variable_if",
-                    "name": "v_mo",
-                    "value": 1
-                }
-            ]
-        }
-    ]
+        },
+        "to": [
+            {
+                "key_code": "down_arrow",
+                "modifiers": ["left_shift"]
+            }
+        ],
+        "to_after_key_up": [
+            {
+                "key_code": "vk_none"
+            }
+        ],
+        "conditions": [
+            {
+                "type": "variable_if",
+                "name": "v_mo",
+                "value": 1
+            }
+        ]
+    };
+
+    var vK = {
+        "type": "basic",
+        "from": {
+            "key_code": "k",
+            "modifiers": {
+                "mandatory": ["option"]
+            },
+        },
+        "to": [
+            {
+                "key_code": "up_arrow",
+                "modifiers": ["left_shift"]
+            }
+        ],
+        "to_after_key_up": [
+            {
+                "key_code": "vk_none"
+            }
+        ],
+        "conditions": [
+            {
+                "type": "variable_if",
+                "name": "v_mo",
+                "value": 1
+            }
+        ]
+    };
+
+    var vDisableOtherKey = {
+        "type": "basic",
+        "from": {
+            "any": "key_code"
+        },
+        "to": [
+            {
+                "key_code": "vk_none"
+            }
+        ],
+        "conditions": [
+            {
+                "type": "variable_if",
+                "name": "v_mo",
+                "value": 1
+            }
+        ]
+    }
+
 
     // 所有 一般规则的键 的集合
     var whole_data = [
         d_mo_data, v_mo_data, disable_settings_data, normal_characters_data
-    ]
+    ];
 
     // 所有 一般规则的生成方程 的集合
     var funcArr = [
         generate_d_mo_single_rule, generate_v_mo_single_rule, generate_disable_settings_single_rule, generate_normal_characters_single_rule,
-    ]
+    ];
 
     // 总的生成方程(包括一般规则和特殊规则), 需要区分顺序,顺序是: dKey => sKey => vKey =>  vJ => vK => d_mo的所有规则 => v_mo的所有规则 => vDisableOtherKey => 所有的disable_settings => 所有的normal_character
     function generate() {
         var result = [], singleRule = [];
-        result = result.concat(dKey, sKey, vKey, vJ, vK)
+        result.push(dKey, sKey, vKey, vJ, vK);
         for (var j = 0; j < whole_data.length; j++) {
             for (var i = 0; i < whole_data[j].length; i++) {
                 singleRule = funcArr[j](whole_data[j][i][0], whole_data[j][i][1], whole_data[j][i][2]);
                 result.push(singleRule)
             }
             if (j == 1) {
-                result = result.concat(vDisableOtherKey)
+                result.push(vDisableOtherKey);
             }
         }
         return result;
@@ -294,30 +293,30 @@ var vK = {
 
     function generate_v_mo_single_rule(from_key_code, to_key_code, to_modifier_key_code_array) {
         var result = {
-                "type": "basic",
-                "from": {
-                    "key_code": from_key_code,
-                    "modifiers": { "optional": ["any"] },
-                },
-                "to": [
-                    {
-                        "key_code": to_key_code,
-                        "modifiers": to_modifier_key_code_array
-                    }
-                ],
-                "to_after_key_up": [
-                    {
-                        "key_code": "vk_none"
-                    }
-                ],
-                "conditions": [
-                    {
-                        "type": "variable_if",
-                        "name": "v_mo",
-                        "value": 1
-                    }
-                ]
-            };
+            "type": "basic",
+            "from": {
+                "key_code": from_key_code,
+                "modifiers": { "optional": ["any"] },
+            },
+            "to": [
+                {
+                    "key_code": to_key_code,
+                    "modifiers": to_modifier_key_code_array
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "key_code": "vk_none"
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "variable_if",
+                    "name": "v_mo",
+                    "value": 1
+                }
+            ]
+        };
         return result;
     }
 

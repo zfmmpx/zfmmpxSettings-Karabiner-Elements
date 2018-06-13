@@ -6,7 +6,7 @@
         "1", "2", "3", "4", "5", "6", "grave_accent_and_tilde"
     ]
 
-    var semiKey = [{
+    var semiKey = {
         "type": "basic",
         "from": {
             "key_code": "semicolon",
@@ -37,9 +37,9 @@
                 }
             }
         ]
-    }]
+    }
 
-    var spaceKey = [{
+    var spaceKey = {
         "type": "basic",
         "from": {
             "key_code": "spacebar"
@@ -59,11 +59,11 @@
                 "value": 1
             }
         ]
-    }]
+    }
 
     function generate() {
         var result = [], singleRule = [];
-        result = result.concat(semiKey, spaceKey);
+        result.push(semiKey, spaceKey);
         for (var i = 0; i < s_mo_data.length; i++) {
             singleRule = generate_s_mo_single_rule(s_mo_data[i]);
             result.push(singleRule)

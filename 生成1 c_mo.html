@@ -10,7 +10,7 @@
         "1", "2", "3", "4", "5"
     ]
 
-    var capsKey = [{
+    var capsKey = {
         "type": "basic",
         "from": {
             "key_code": "caps_lock",
@@ -41,12 +41,12 @@
                 }
             }
         ]
-    }]
+    }
 
 
     function generate() {
         var result = [], singleRule = [];
-        result = result.concat(capsKey);
+        result.push(capsKey);
         for (var i = 0; i < c_mo_data.length; i++) {
             singleRule = generate_c_mo_single_rule(c_mo_data[i]);
             result.push(singleRule)

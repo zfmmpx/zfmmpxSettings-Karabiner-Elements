@@ -209,16 +209,13 @@
             "key_code": "f7",
             "modifiers": {
               "optional": [
-                "caps_lock"
+                "any"
               ]
             }
           },
           "to": [
             {
-              "key_code": "f16",
-              "modifiers": [
-                "left_shift"
-              ]
+              "key_code": "f16"
             }
           ]
         },
@@ -247,16 +244,13 @@
             "key_code": "f9",
             "modifiers": {
               "optional": [
-                "caps_lock"
+                "any"
               ]
             }
           },
           "to": [
             {
-              "key_code": "f19",
-              "modifiers": [
-                "left_shift"
-              ]
+              "key_code": "f19"
             }
           ]
         },
