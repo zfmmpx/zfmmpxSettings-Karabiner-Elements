@@ -80,9 +80,9 @@
           },
           "to": [
             {
-              "key_code": "f18",
+              "key_code": "f16",
               "modifiers": [
-                "left_option"
+                "left_control"
               ]
             }
           ]
@@ -99,9 +99,9 @@
           },
           "to": [
             {
-              "key_code": "f16",
+              "key_code": "f17",
               "modifiers": [
-                "left_option"
+                "left_control"
               ]
             }
           ]
@@ -118,9 +118,9 @@
           },
           "to": [
             {
-              "key_code": "f19",
+              "key_code": "f18",
               "modifiers": [
-                "left_option"
+                "left_control"
               ]
             }
           ]
@@ -129,6 +129,25 @@
           "type": "basic",
           "from": {
             "key_code": "f3",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f19",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f5",
             "modifiers": {
               "optional": [
                 "caps_lock"
@@ -148,7 +167,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "f4",
+            "key_code": "f6",
             "modifiers": {
               "optional": [
                 "caps_lock"
@@ -168,7 +187,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "f5",
+            "key_code": "f7",
             "modifiers": {
               "optional": [
                 "caps_lock"
@@ -179,43 +198,9 @@
             {
               "key_code": "f16",
               "modifiers": [
-                "left_control"
+                "left_control",
+                "left_option"
               ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f6",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f17",
-              "modifiers": [
-                "left_control"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "f7",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f16"
             }
           ]
         },
@@ -233,6 +218,7 @@
             {
               "key_code": "f17",
               "modifiers": [
+                "left_control",
                 "left_option"
               ]
             }
@@ -244,13 +230,17 @@
             "key_code": "f9",
             "modifiers": {
               "optional": [
-                "any"
+                "caps_lock"
               ]
             }
           },
           "to": [
             {
-              "key_code": "f19"
+              "key_code": "f18",
+              "modifiers": [
+                "left_control",
+                "left_option"
+              ]
             }
           ]
         },
